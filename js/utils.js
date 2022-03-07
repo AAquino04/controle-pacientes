@@ -31,7 +31,7 @@ function validaCampos(paciente) {
  */
 function calculaIMC(pacientes) {
     pacientes.forEach(paciente => {
-        [peso, altura] = validaCampos(paciente);
+        const [peso, altura] = validaCampos(paciente);
         if (peso === null || altura === null) {
             paciente.querySelector(".info-imc").textContent = "Campos inválidos";
             return;
